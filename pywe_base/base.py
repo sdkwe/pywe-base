@@ -7,6 +7,7 @@ class BaseWechat(object):
     def __init__(self):
         self.API_DOMAIN = 'https://api.weixin.qq.com'
         self.OPEN_DOMAIN = 'https://open.weixin.qq.com'
+        self.MCH_DOMAIN = 'https://api.mch.weixin.qq.com'
 
     def get(self, url, verify=False, **kwargs):
         # When ``verify=True`` and ``cacert.pem`` not match ``https://xxx.weixin.qq.com``, will raise
