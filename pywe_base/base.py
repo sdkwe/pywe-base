@@ -15,3 +15,8 @@ class BaseWechat(object):
         res = requests.get(url.format(**kwargs), verify=verify)
         res.encoding = 'utf-8'
         return res.json()
+
+    def post(self, url, verify=False, **kwargs):
+        res = requests.post(url, verify=verify, **kwargs)
+        res.encoding = 'utf-8'
+        return res.json()
