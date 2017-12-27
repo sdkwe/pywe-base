@@ -38,7 +38,7 @@ class BaseWechat(object):
             if data_to_json_str:
                 data = kwargs.get('data', None)
                 if data and isinstance(data, dict):
-                    kwargs['data'] = json.dumps(data)
+                    kwargs['data'] = json.dumps(data, ensure_ascii=False).encode('utf-8')
             if data_to_xml_str:
                 data = kwargs.get('data', None)
                 if data and isinstance(data, dict):
