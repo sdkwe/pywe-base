@@ -12,6 +12,9 @@ class BaseWechat(object):
         self.OPEN_DOMAIN = 'https://open.weixin.qq.com'
         self.MCH_DOMAIN = 'https://api.mch.weixin.qq.com'
 
+    def geturl(self, url, **kwargs):
+        return url.format(**kwargs)
+
     def get(self, url, verify=False, encoding='utf-8', res_to_encoding=True, res_to_json=True, res_processor_func=None, resjson_processor_func=None, **kwargs):
         # When ``verify=True`` and ``cacert.pem`` not match ``https://xxx.weixin.qq.com``, will raise
         # SSLError: [Errno 1] _ssl.c:510: error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed
