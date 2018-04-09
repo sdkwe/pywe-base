@@ -9,8 +9,9 @@ from pywe_xml import dict_to_xml
 class BaseWechat(object):
     def __init__(self):
         self.API_DOMAIN = 'https://api.weixin.qq.com'
-        self.OPEN_DOMAIN = 'https://open.weixin.qq.com'
         self.MCH_DOMAIN = 'https://api.mch.weixin.qq.com'
+        self.MP_DOMAIN = 'https://mp.weixin.qq.com'
+        self.OPEN_DOMAIN = 'https://open.weixin.qq.com'
 
     def geturl(self, url, **kwargs):
         return url.format(**kwargs)
