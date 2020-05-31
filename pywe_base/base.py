@@ -13,6 +13,8 @@ class BaseWechat(object):
         self.MP_DOMAIN = 'https://mp.weixin.qq.com'
         self.OPEN_DOMAIN = 'https://open.weixin.qq.com'
 
+        self.QYAPI_DOMAIN = 'https://qyapi.weixin.qq.com'
+
     def geturl(self, url, **kwargs):
         return url.format(**kwargs)
 
